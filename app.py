@@ -19,7 +19,7 @@ user_id = st.text_input("반", placeholder="example_user")
 st.header("2. 챗봇 설정")
 creativity = st.slider("난이도", 0, 100, 50)
 creativity = st.slider("점수", 0, 100, 50)
-user_id = st.text_input("이름", placeholder="example_user")
+user_id = st.text_input("소감", placeholder="example_user")
 
 if st.button("질문 전송하기"):
     if agree:
