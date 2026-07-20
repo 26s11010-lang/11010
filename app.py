@@ -1,17 +1,8 @@
 import streamlit as st
 
-st.markdown("# AI 챗봇 만들기")
-st.markdown("---")
-st.markdown("## 질문을 하시면 AI 친구가 응답합니다.")
-st.markdown("* **제작 언어**: 'python'")
-st.markdown("* **프레임워크**: 'streamlit'")
-st.markdown("### '최근 대화'")
-st.markdown("~~질문을 자유롭게 입력하세요.~~")
+st.markdown("# 앱 UI 만들기")
 import streamlit as st
 
-st.markdown("# AI 챗봇 만들기")
-st.markdown("---")
-st.markdown("## 질문을 하시면 AI 친구가 응답합니다.")
 user_id = st.text_input("이름", placeholder="example_user")
 creativity = st.slider("학년", 1, 2, 3)
 user_id = st.text_input("반", placeholder="example_user")
