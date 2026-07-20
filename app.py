@@ -15,5 +15,5 @@ user_id = st.text_input("소감", placeholder="example_user")
 if st.button("확인"):
     if agree:
         st.success(f"{name} / ({grade}학년) / {cls}반 / {level}" )
-        st.markdown(f"점수: '{score}':)
-        st.info(f"소감: {text)")
+        st.markdown(f"점수: '{score}'")
+        st.info(f"소감: {text}")
