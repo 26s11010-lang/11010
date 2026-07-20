@@ -12,19 +12,14 @@ import streamlit as st
 st.markdown("# AI 챗봇 만들기")
 st.markdown("---")
 st.markdown("## 질문을 하시면 AI 친구가 응답합니다.")
-st.header("1. 기본 정보 입력")
-user_id = st.text_input("아이디(ID)를 입력하세요", placeholder="example_user")
-age = st.number_input("나이를 입력하세요", min_value=1, max_value=100, value=17)
-question = st.text_area("AI에게 보낼 질문을 입력하세요", placeholder="여기에 질문을 작성해 주세요.")
+user_id = st.text_input("이름", placeholder="example_user")
+creativity = st.slider("학년", 1, 2, 3)
+user_id = st.text_input("반", placeholder="example_user")
 
 st.header("2. 챗봇 설정")
-ai_model = st.radio("사용할 AI 모델을 선택하세요", ["GPT-4", "Claude 3", "Gemini Pro"], horizontal=True)
-tone = st.selectbox("답변의 말투를 골라주세요", ["친절하게", "냉철하게", "유머러스하게"])
-features = st.multiselect("추가 기능을 선택하세요", ["이미지 생성", "웹 검색", "코드 분석", "번역"])
-creativity = st.slider("AI의 창의성 수준을 설정하세요", 0, 100, 50)
-ai_speed = st.select_slider("응답 처리 속도를 선택하세요",options=["매우 느림", "느림", "보통", "빠름", "실시간"],value="보통")
-agree = st.checkbox("개인정보 수집 및 AI 학습 이용에 동의합니다.")
-st.markdown("---")
+creativity = st.slider("난이도", 0, 100, 50)
+creativity = st.slider("점수", 0, 100, 50)
+st.markdown("소감")
 
 if st.button("질문 전송하기"):
     if agree:
